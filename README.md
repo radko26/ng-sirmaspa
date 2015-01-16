@@ -21,6 +21,6 @@
 
 1. Run bower in the ng-sirmaspa directory to install front-end dependencies: `bower install`.
 2. Install other dependencies: `npm install`.
-3. Use gulp start to launch the app on `http://localhost:8081/public`
+3. Use `gulp start` to launch the app on `http://localhost:8081/public`
    
 I hope you find this useful!

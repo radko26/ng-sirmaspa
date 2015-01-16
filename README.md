@@ -4,6 +4,7 @@
 #### ng-sirmaspa includes:
 * **Application**
     * [RequireJS](http://requirejs.org/) - JavaScript file and module loader
+    * [ocLazyLoad](https://github.com/ocombe/ocLazyLoad) - Load modules on demand (lazy load) in AngularJS
     * [Bower](http://bower.io/) - Front-end package manager
     * [Gulp](http://gulpjs.com/) - Streaming build system
 * **Testing**
@@ -11,11 +12,13 @@
     * [Karma](http://karma-runner.github.io/) - JavaScript unit test runner
     * [Mocha](http://mochajs.org/) - Testing framework
     * [Chai](http://chaijs.com/) - Super-flexible assertion library
-    * [Istanbul](http://gotwarlost.github.io/istanbul/) - Yet another code coverage tool for Javascript,
+    * [Istanbul](http://gotwarlost.github.io/istanbul/) - Yet another code coverage tool for Javascript
 
 
 #### Instructions:
 *
 
-
+1.Run bower in the ng-sirmaspa directory to install front-end dependencies: `bower install`.
+2.Install other dependencies: `npm install`.
+3.Use gulp start to launch the app on `http://localhost:8081/public`
 I hope you find this useful!

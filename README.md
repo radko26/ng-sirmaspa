@@ -23,4 +23,5 @@
 2. Install other dependencies: `npm install`.
 3. Use `gulp start` to launch the app on `http://localhost:8081/public`.
   * Use `gulp -d <path>` to set different build path.
+
 I hope you find this useful!

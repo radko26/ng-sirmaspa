@@ -34,13 +34,12 @@ define(
         var taskCopy = {
           content : task.content,
           expire : expires,
-          finished : false
+          finished : false,
+          id : $scope.table.length+1
         };
 
-        TasksService.addTask(taskCopy).then(function(){ $scope.update();});
-        
-
-        
+        //TasksService.addTask(taskCopy).then(function(){ $scope.update();});
+        $scope.table.push(taskCopy);
         $('#addTaskFormModal').modal('toggle');
        
         setTimeout(function(){$state.go('^');}, 200);

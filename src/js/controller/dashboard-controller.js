@@ -28,13 +28,14 @@ define(
       function($scope,$state,TasksService) {
         $scope.table = [];
 
+/*
         $scope.update = function(){
           TasksService.getTasks().then(function(tasks){   
             $scope.table = tasks.data;
           });
         };
-
-        $scope.update();
+*/
+       // $scope.update();
 
         $scope.isFinished = function(task){
          return !task.finished;
@@ -42,13 +43,14 @@ define(
 
        $scope.markAsFinished = function(task){
         console.log('should mark as finished ' + task.content);
-        TasksService.markAsFinished(task).then(function(){ $scope.update();});
-       
+        //TasksService.markAsFinished(task).then(function(){ $scope.update();});
+        $scope.table[$scope.table.indexOf(task)].finished=true;
       };
 
       $scope.deleteTask = function(task){
         console.log('should delete task ' + task.content);
-        TasksService.removeTask(task).then(function(){ $scope.update();});
+        //.TasksService.removeTask(task).then(function(){ $scope.update();});
+        $scope.table.splice($scope.table.indexOf(task),1);
       };
 
       $scope.add = function (){

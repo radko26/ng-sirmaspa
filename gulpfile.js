@@ -104,6 +104,10 @@ gulp.task('css', function() {
 
 });
 
+gulp.task('fonts', function(){
+  gulp.src('src/theme/fonts/*.*').pipe(gulp.dest(DIST_PATH+'theme/fonts')).pipe(connect.reload());
+});
+
 gulp.task('image', function () {
   gulp.src('src/theme/image/**.*')
   .pipe(imagemin())
@@ -146,13 +150,16 @@ gulp.task('watch-mode', function() {
   mode = WATCH_MODE;
   var jsWatcher = gulp.watch('src/js/**/*.js', ['js']),
   indexWatcher = gulp.watch('src/index.html',['index']),
-  cssWatcher = gulp.watch('src/less/**/*.less', ['css']),
-  imageWatcher = gulp.watch('src/image/**/*', ['image']),
-  testWatcher = gulp.watch('test/**/*.js', ['karma']);
+  cssWatcher = gulp.watch('src/theme/less/**/*.less', ['css']),
+  imageWatcher = gulp.watch('src/theme/image/**/*', ['image']),
+  testWatcher = gulp.watch('test/**/*.js', ['karma']),
+  fontsWatcher = gulp.watch('src/theme/fonts');
+
   function changeNotification(event) {
     console.log('File', event.path, 'was', event.type, ', running tasks...');
   }
   indexWatcher.on('change',changeNotification);
+  fontsWatcher.on('change',changeNotification);
   jsWatcher.on('change', changeNotification);
   cssWatcher.on('change', changeNotification);
   imageWatcher.on('change', changeNotification);
@@ -160,7 +167,7 @@ gulp.task('watch-mode', function() {
 });
 
 
-gulp.task('build', ['css', 'js','lint','image','template', 'index','lib']);
+gulp.task('build', ['css', 'js','lint','image','template', 'index','lib','fonts']);
 gulp.task('all', ['build', 'karma']);
 gulp.task('default', ['watch-mode', 'all']);
 gulp.task('server', ['connect', 'default']);

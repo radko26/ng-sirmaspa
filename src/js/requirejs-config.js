@@ -2,13 +2,13 @@ var requirejsConfig = {
   baseUrl: '',
   paths: {
     'angular': [
-      'lib/angular/angular.min'
+      'lib/angular/angular'
     ],
     'angular-ui-router': [
-      'lib/angular-ui-router/release/angular-ui-router.min'
+      'lib/angular-ui-router/release/angular-ui-router'
     ],
     'ocLazyLoad':[
-      'lib/oclazyload/dist/ocLazyLoad.min'
+      'lib/oclazyload/dist/ocLazyLoad'
     ]
   },
   shim: {

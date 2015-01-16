@@ -10,14 +10,14 @@ define(
     'use strict';
 
     angular
-    .module('todoApp', ['todoApp.home-controller','ui.router','oc.lazyLoad','oc.lazyLoad.uiRouterDecorator'])
+    .module('todoApp', ['ui.router','oc.lazyLoad','oc.lazyLoad.uiRouterDecorator','todoApp.home-controller'])
     .config([
       '$locationProvider',
       '$stateProvider',
       '$urlRouterProvider',
       '$ocLazyLoadProvider',
 
-      function($locationProvider,$stateProvider,$urlRouterProvider,$ocLazyLoadProvider) { 
+      function($locationProvider,$stateProvider,$urlRouterProvider,$ocLazyLoadProvider) { // jshint ignore:line
         $ocLazyLoadProvider.config({
          loadedModules: ['todoApp'],
          asyncLoader: require
@@ -28,7 +28,6 @@ define(
         $urlRouterProvider.otherwise('home/dashboard');
 
         $stateProvider
-
         .state('home', {
           abstract:true,
           url: '/home',

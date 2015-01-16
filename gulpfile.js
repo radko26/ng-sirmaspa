@@ -171,5 +171,5 @@ gulp.task('build', ['css', 'js','lint','image','template', 'index','lib','fonts'
 gulp.task('all', ['build', 'karma']);
 gulp.task('default', ['watch-mode', 'all']);
 gulp.task('server', ['connect', 'default']);
-gulp.task('test', ['debug', 'connect', 'all']);
-gulp.task('start', ['debug','watch-mode','build','connect',]);
+gulp.task('test', ['debug','default','connect']);
+gulp.task('start', ['watch-mode','build','connect',]);

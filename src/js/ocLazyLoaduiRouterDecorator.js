@@ -7,7 +7,8 @@ define(
   function(angular) {
   'use strict';
 
-    angular.module('oc.lazyLoad.uiRouterDecorator', ['ui.router']).config(function($stateProvider) {
+    angular.module('oc.lazyLoad.uiRouterDecorator', ['ui.router'])
+    .config(['$stateProvider',function($stateProvider) {
 
     
      function lazyBundle(module, files, templateUrl) {
@@ -59,5 +60,5 @@ define(
       return views;
     });
 
-   });
+   }]);
 });

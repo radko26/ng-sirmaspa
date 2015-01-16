@@ -5,6 +5,7 @@
 * **Application**
     * [RequireJS](http://requirejs.org/) - JavaScript file and module loader
     * [ocLazyLoad](https://github.com/ocombe/ocLazyLoad) - Load modules on demand (lazy load) in AngularJS
+    * [uiRouter] (https://github.com/angular-ui/ui-router) - The de-facto solution to flexible routing with nested views
     * [Bower](http://bower.io/) - Front-end package manager
     * [Gulp](http://gulpjs.com/) - Streaming build system
 * **Testing**

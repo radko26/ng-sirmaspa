@@ -12,8 +12,6 @@
     * [Mocha](http://mochajs.org/) - Testing framework
     * [Chai](http://chaijs.com/) - Super-flexible assertion library
     * [Istanbul](http://gotwarlost.github.io/istanbul/) - Yet another code coverage tool for Javascript,
-* **Style**
-    * [airbnb/javascript](https://github.com/airbnb/javascript/) - JavaScript Style Guide
 
 
 #### Instructions:

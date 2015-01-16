@@ -89,7 +89,7 @@ gulp.task('css', function() {
     options.outputStyle = 'expanded';
     options.sourceComments = 'map';
   }
-  var cssTask = gulp.src('src/theme/css/less/*.less')
+  var cssTask = gulp.src('src/theme/css/less/**/*.less')
   .pipe(less(options));
   if (!debug) {
     cssTask.pipe(minifyCSS());
@@ -97,7 +97,7 @@ gulp.task('css', function() {
   cssTask.pipe(gulp.dest(DIST_PATH+'theme/css'))
   .pipe(connect.reload());
 
-  cssTask = gulp.src('src/theme/css/**/*.css').pipe(gulp.dest(DIST_PATH+'/theme/css'));
+  cssTask = gulp.src('src/theme/css/**/*.css').pipe(gulp.dest(DIST_PATH+'/theme/css')).pipe(connect.reload());
   if (!debug) {
     cssTask.pipe(minifyCSS());
   }
@@ -105,13 +105,13 @@ gulp.task('css', function() {
 });
 
 gulp.task('fonts', function(){
-  gulp.src('src/theme/fonts/*.*').pipe(gulp.dest(DIST_PATH+'theme/fonts')).pipe(connect.reload());
+  gulp.src('src/theme/fonts/**/*.*').pipe(gulp.dest(DIST_PATH+'theme/fonts')).pipe(connect.reload());
 });
 
 gulp.task('image', function () {
-  gulp.src('src/theme/image/**.*')
+  gulp.src('src/theme/images/**/*.*')
   .pipe(imagemin())
-  .pipe(gulp.dest(DIST_PATH+'theme/image'))
+  .pipe(gulp.dest(DIST_PATH+'theme/images'))
   .pipe(connect.reload());
 });
 
@@ -151,9 +151,9 @@ gulp.task('watch-mode', function() {
   var jsWatcher = gulp.watch('src/js/**/*.js', ['js']),
   indexWatcher = gulp.watch('src/index.html',['index']),
   cssWatcher = gulp.watch('src/theme/less/**/*.less', ['css']),
-  imageWatcher = gulp.watch('src/theme/image/**/*', ['image']),
+  imageWatcher = gulp.watch('src/theme/imags/', ['image']),
   testWatcher = gulp.watch('test/**/*.js', ['karma']),
-  fontsWatcher = gulp.watch('src/theme/fonts');
+  fontsWatcher = gulp.watch('src/theme/fonts/');
 
   function changeNotification(event) {
     console.log('File', event.path, 'was', event.type, ', running tasks...');

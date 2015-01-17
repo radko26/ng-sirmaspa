@@ -1,17 +1,14 @@
 define(
   [
-  'angular',
   'angular-mocks',
-  'js/app',
   'js/service/date-service',
-  'js/controller/dashboard-controller'
   ],
   function() {
     describe('DateService', function() {
     
     beforeEach(function(){
-        angular.module('todoApp', ['todoApp.date-service']);
-        module('todoApp');
+        angular.module('mockApp', ['todoApp.date-service']);
+        module('mockApp');
     });
 
      describe('date formatter', function() {

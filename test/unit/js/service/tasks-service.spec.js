@@ -1,7 +1,6 @@
 define(
 	[
 	'angular-mocks',
-	'js/app',
 	'js/service/tasks-service',
 	'js/service/global-service'
 	],
@@ -9,8 +8,8 @@ define(
 
 		describe('Get tasks service test', function() {
 			beforeEach(function(){
-				angular.module('todoApp', ['todoApp.tasks-service']);
-				module('todoApp');
+				angular.module('mockApp', ['todoApp.tasks-service']);
+				module('mockApp');
 			});
 			var $httpBackend;
 			var TasksService;

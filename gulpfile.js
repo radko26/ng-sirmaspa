@@ -151,9 +151,9 @@ gulp.task('watch-mode', function() {
   var jsWatcher = gulp.watch('src/js/**/*.js', ['js']),
   indexWatcher = gulp.watch('src/index.html',['index']),
   cssWatcher = gulp.watch('src/theme/less/**/*.less', ['css']),
-  imageWatcher = gulp.watch('src/theme/imags/', ['image']),
+  imageWatcher = gulp.watch('src/theme/images/', ['image']),
   testWatcher = gulp.watch('test/**/*.js', ['karma']),
-  fontsWatcher = gulp.watch('src/theme/fonts/');
+  fontsWatcher = gulp.watch('src/theme/fonts/',['fonts']);
 
   function changeNotification(event) {
     console.log('File', event.path, 'was', event.type, ', running tasks...');

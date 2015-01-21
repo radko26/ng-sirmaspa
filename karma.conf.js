@@ -17,7 +17,7 @@ module.exports = function(config) {
   config.set({
     basePath: '',
     frameworks: ['requirejs','mocha', 'chai'],
-    reporters: ['mocha', 'coverage', 'junit'],
+    reporters: ['mocha', 'coverage'],
     preprocessors: {
       'src/js/**/*.js': ['coverage']
     },
@@ -25,10 +25,6 @@ module.exports = function(config) {
       type : 'lcov',
       dir : 'test',
       subdir: 'sonar_report'
-    },
-    junitReporter: {
-      outputFile: 'test/sonar_report/test-results.xml',
-      suite: ''
     },
     files: testFiles,
     autoWatch: false,

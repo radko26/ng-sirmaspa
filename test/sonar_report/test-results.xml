@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="PhantomJS 1.9.8 (Windows 7)" package="" timestamp="2015-01-21T14:30:45" id="0" hostname="radoslav-PC" tests="5" errors="0" failures="0" time="0.009">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34"/>
+    </properties>
+    <testcase name="should transform timestamp to date" time="0" classname="PhantomJS 1.9.8 (Windows 7).DateService date formatter"/>
+    <testcase name="should get tasks" time="0.006" classname="PhantomJS 1.9.8 (Windows 7).Get tasks service test get tasks"/>
+    <testcase name="should send query to create new task" time="0.001" classname="PhantomJS 1.9.8 (Windows 7).Get tasks service test adds task"/>
+    <testcase name="should delete the given task" time="0.001" classname="PhantomJS 1.9.8 (Windows 7).Get tasks service test delete task"/>
+    <testcase name="should mark the task as finished" time="0.001" classname="PhantomJS 1.9.8 (Windows 7).Get tasks service test mark task as finished"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>
